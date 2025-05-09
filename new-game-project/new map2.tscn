@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr26ehdf2oq6e"]
+[gd_scene load_steps=9 format=3 uid="uid://cr26ehdf2oq6e"]
 
 [ext_resource type="Texture2D" uid="uid://bpldpxnufhgb4" path="res://black.jpg" id="1_8yr8p"]
-[ext_resource type="Texture2D" uid="uid://pb75t8jgbfw5" path="res://triangle.png" id="2_ke73u"]
-[ext_resource type="Script" uid="uid://dctr3d5tfaji8" path="res://enemyreal.gd" id="3_5bncp"]
+[ext_resource type="Script" uid="uid://ctqgqku1y6a46" path="res://character_body_2d.gd" id="4_5bncp"]
+[ext_resource type="Texture2D" uid="uid://dqjtriqip04gg" path="res://Red_cube.jpg" id="5_8a2b0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cenv"]
 size = Vector2(896, 193)
@@ -15,6 +15,9 @@ size = Vector2(321.866, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1enr2"]
 size = Vector2(321.925, 16.3243)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m38yl"]
+size = Vector2(32, 32)
 
 [node name="Map" type="Node2D"]
 
@@ -65,19 +68,16 @@ position = Vector2(168, 120)
 rotation = 0.314159
 shape = SubResource("RectangleShape2D_1enr2")
 
-[node name="enemy2" type="CharacterBody2D" parent="StaticBody2D"]
-script = ExtResource("3_5bncp")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/enemy2"]
-modulate = Color(0.93223, 0.271447, 0.629277, 1)
-position = Vector2(434, 93)
-rotation = 1.5708
-scale = Vector2(0.0499996, 0.249125)
-texture = ExtResource("2_ke73u")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/enemy2"]
-position = Vector2(320, -103)
-rotation = 1.5708
-polygon = PackedVector2Array(177, -15, 181.401, -73.7469, 196, -214, 217, -15)
-
 [node name="testy thingy for simon limon" type="Node2D" parent="StaticBody2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("4_5bncp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(638, 104)
+shape = SubResource("RectangleShape2D_m38yl")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(638, 104)
+scale = Vector2(0.0894445, 0.0894444)
+texture = ExtResource("5_8a2b0")
