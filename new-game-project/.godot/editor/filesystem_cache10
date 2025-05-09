@@ -1,7 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1746831936
-black.jpg::CompressedTexture2D::3105950647723163744::1746831936::1746831936::1::::<><><>0<>0<>510dbf272ccb7b6a5376cdb1e3130046<>res://.godot/imported/black.jpg-e77cc3b1a6a29834458903dec52fab7f.ctex::
-new map.tscn::PackedScene/PackedScene::8712392844776909358::1746831606::0::1::::<><><>0<>0<><>::uid://bpldpxnufhgb4::::res://black.jpg<>uid://pb75t8jgbfw5::::res://triangle.png<>uid://dctr3d5tfaji8::::res://enemyreal.gd<>uid://dfqphbpymrr0a::::res://sprite_2d.gd<>uid://1a0qi2ichjft::::res://Red_cube.jpg
+::res://::1746834359
+black.jpg::CompressedTexture2D/CompressedTexture2D::3105950647723163744::1746831936::1746831936::1::::<><><>0<>0<>510dbf272ccb7b6a5376cdb1e3130046<>res://.godot/imported/black.jpg-e77cc3b1a6a29834458903dec52fab7f.ctex::
+enemyreal.gd::GDScript::3211043998992034555::1746831972::0::1::::<>CharacterBody2D<><>0<>0<><>::
+new map.tscn::PackedScene::8712392844776909358::1746831975::0::1::::<><><>0<>0<><>::uid://bkiss2yfseyey::::res://black.jpg<>uid://duxgddaajd3ls::::res://triangle.png<>uid://bl0pop52blgtv::::res://enemyreal.gd<>uid://dfqphbpymrr0a::::res://sprite_2d.gd<>uid://1a0qi2ichjft::::res://Red_cube.jpg
 Red_cube.jpg::CompressedTexture2D/CompressedTexture2D::1826456894373444089::1746831606::1746831631::1::::<><><>0<>0<>4d028f885dc0ef6be43997ecef7f9bda<>res://.godot/imported/Red_cube.jpg-bbdb5f344ecced99659fa84e49d5370a.ctex::
 sprite_2d.gd::GDScript/GDScript::7544159645585843998::1746831606::0::1::::<>CharacterBody2D<><>0<>0<><>::
-triangle.png::CompressedTexture2D::8610889429103867296::1746831936::1746831936::1::::<><><>0<>0<>4865493d4193ab1197a07d8810a9f6e2<>res://.godot/imported/triangle.png-53a0c5b2abae92a9e7f23d30d12f32c2.ctex::
+triangle.png::CompressedTexture2D/CompressedTexture2D::8610889429103867296::1746831936::1746831936::1::::<><><>0<>0<>4865493d4193ab1197a07d8810a9f6e2<>res://.godot/imported/triangle.png-53a0c5b2abae92a9e7f23d30d12f32c2.ctex::

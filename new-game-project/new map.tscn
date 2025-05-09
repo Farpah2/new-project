@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://dfqphbpymrr0a" path="res://sprite_2d.gd" id="4_1enr2"]
 [ext_resource type="Texture2D" uid="uid://1a0qi2ichjft" path="res://Red_cube.jpg" id="5_r6hni"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cenv"]
 size = Vector2(896, 193)
 
