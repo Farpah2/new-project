@@ -1,10 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://dwel3p4sus40y"]
 
-[ext_resource type="Texture2D" uid="uid://bpldpxnufhgb4" path="res://black.jpg" id="1_8smjm"]
-[ext_resource type="Texture2D" uid="uid://pb75t8jgbfw5" path="res://triangle.png" id="2_xysnw"]
-[ext_resource type="Script" uid="uid://dctr3d5tfaji8" path="res://enemyreal.gd" id="3_xysnw"]
+[ext_resource type="Texture2D" uid="uid://bkiss2yfseyey" path="res://black.jpg" id="1_8smjm"]
+[ext_resource type="Texture2D" uid="uid://duxgddaajd3ls" path="res://triangle.png" id="2_xysnw"]
+[ext_resource type="Script" uid="uid://bl0pop52blgtv" path="res://enemyreal.gd" id="3_xysnw"]
 [ext_resource type="Script" uid="uid://dfqphbpymrr0a" path="res://sprite_2d.gd" id="4_1enr2"]
 [ext_resource type="Texture2D" uid="uid://1a0qi2ichjft" path="res://Red_cube.jpg" id="5_r6hni"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cenv"]
 size = Vector2(896, 193)
