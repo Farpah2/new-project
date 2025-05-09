@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwel3p4sus40y"]
+
+[ext_resource type="Texture2D" uid="uid://bpldpxnufhgb4" path="res://black.jpg" id="1_8smjm"]
+[ext_resource type="Texture2D" uid="uid://pb75t8jgbfw5" path="res://triangle.png" id="2_xysnw"]
+[ext_resource type="Script" uid="uid://dctr3d5tfaji8" path="res://enemyreal.gd" id="3_xysnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cenv"]
+size = Vector2(896, 193)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xysnw"]
+size = Vector2(384, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b63n3"]
+size = Vector2(321.866, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1enr2"]
+size = Vector2(321.925, 16.3243)
+
+[node name="Map" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-2, -5)
+
+[node name="Baseplate sprite" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576.25, 416.75)
+scale = Vector2(4.68848, 1.08101)
+texture = ExtResource("1_8smjm")
+
+[node name="Baseplate" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(576, 416.5)
+shape = SubResource("RectangleShape2D_4cenv")
+
+[node name="Middle platform" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576, 200.75)
+scale = Vector2(2.01047, 0.0977654)
+texture = ExtResource("1_8smjm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(576, 200.5)
+shape = SubResource("RectangleShape2D_xysnw")
+
+[node name="Right platform sprite" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(983.271, 120.357)
+rotation = -0.314159
+scale = Vector2(1.68675, 0.0924535)
+texture = ExtResource("1_8smjm")
+
+[node name="Right platform" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(983.113, 120.288)
+rotation = -0.314159
+shape = SubResource("RectangleShape2D_b63n3")
+
+[node name="Left platform sprite" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(168.948, 119.852)
+rotation = 0.314159
+scale = Vector2(1.6823, 0.0924435)
+texture = ExtResource("1_8smjm")
+
+[node name="Left platform" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(168, 120)
+rotation = 0.314159
+shape = SubResource("RectangleShape2D_1enr2")
+
+[node name="Node2D" type="Node2D" parent="StaticBody2D"]
+
+[node name="player" type="CharacterBody2D" parent="StaticBody2D/Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Node2D/player"]
+position = Vector2(818, 123.7)
+scale = Vector2(0.0500002, 0.25)
+texture = ExtResource("2_xysnw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Node2D/player"]
+position = Vector2(622, 239.7)
+polygon = PackedVector2Array(177, -15, 196, -214, 217, -15)
+
+[node name="enemy2" type="CharacterBody2D" parent="StaticBody2D"]
+script = ExtResource("3_xysnw")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/enemy2"]
+modulate = Color(0.93223, 0.271447, 0.629277, 1)
+position = Vector2(434, 93)
+rotation = 1.5708
+scale = Vector2(0.0499996, 0.249125)
+texture = ExtResource("2_xysnw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/enemy2"]
+position = Vector2(320, -103)
+rotation = 1.5708
+polygon = PackedVector2Array(177, -15, 181.401, -73.7469, 196, -214, 217, -15)
