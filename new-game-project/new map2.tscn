@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr26ehdf2oq6e"]
+[gd_scene load_steps=11 format=3 uid="uid://cr26ehdf2oq6e"]
 
 [ext_resource type="Texture2D" uid="uid://bpldpxnufhgb4" path="res://black.jpg" id="1_8yr8p"]
+[ext_resource type="Script" uid="uid://d03i5lytvxvkt" path="res://Player.gd" id="2_5bncp"]
 [ext_resource type="Texture2D" uid="uid://pb75t8jgbfw5" path="res://triangle.png" id="2_ke73u"]
 [ext_resource type="Script" uid="uid://dctr3d5tfaji8" path="res://enemyreal.gd" id="3_5bncp"]
+[ext_resource type="Texture2D" uid="uid://rafajf7b228u" path="res://Red_cube.jpg" id="3_8a2b0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cenv"]
 size = Vector2(896, 193)
@@ -15,6 +17,9 @@ size = Vector2(321.866, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1enr2"]
 size = Vector2(321.925, 16.3243)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m38yl"]
+size = Vector2(33, 32)
 
 [node name="Map" type="Node2D"]
 
@@ -65,18 +70,19 @@ position = Vector2(168, 120)
 rotation = 0.314159
 shape = SubResource("RectangleShape2D_1enr2")
 
-[node name="Node2D" type="Node2D" parent="StaticBody2D"]
+[node name="player" type="Node2D" parent="StaticBody2D"]
 
-[node name="player" type="CharacterBody2D" parent="StaticBody2D/Node2D"]
+[node name="Player" type="CharacterBody2D" parent="StaticBody2D/player"]
+script = ExtResource("2_5bncp")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Node2D/player"]
-position = Vector2(818, 123.7)
-scale = Vector2(0.0500002, 0.25)
-texture = ExtResource("2_ke73u")
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/player/Player"]
+position = Vector2(818, 34)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_8a2b0")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Node2D/player"]
-position = Vector2(621, 239)
-polygon = PackedVector2Array(177, -15, 196, -214, 206.653, -113.05, 217, -15)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/player/Player"]
+position = Vector2(817.5, 34)
+shape = SubResource("RectangleShape2D_m38yl")
 
 [node name="enemy2" type="CharacterBody2D" parent="StaticBody2D"]
 script = ExtResource("3_5bncp")
