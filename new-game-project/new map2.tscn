@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://cr26ehdf2oq6e"]
+
+[ext_resource type="Texture2D" uid="uid://bpldpxnufhgb4" path="res://black.jpg" id="1_8yr8p"]
+[ext_resource type="Script" uid="uid://ctqgqku1y6a46" path="res://character_body_2d.gd" id="4_5bncp"]
+[ext_resource type="Texture2D" uid="uid://dqjtriqip04gg" path="res://Red_cube.jpg" id="5_8a2b0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cenv"]
+size = Vector2(896, 193)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xysnw"]
+size = Vector2(384, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b63n3"]
+size = Vector2(321.866, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1enr2"]
+size = Vector2(321.925, 16.3243)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m38yl"]
+size = Vector2(32, 32)
+
+[node name="Map" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-2, -5)
+
+[node name="Baseplate sprite" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576.25, 416.75)
+scale = Vector2(4.68848, 1.08101)
+texture = ExtResource("1_8yr8p")
+
+[node name="Baseplate" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(576, 416.5)
+shape = SubResource("RectangleShape2D_4cenv")
+
+[node name="Middle platform" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576, 200.75)
+scale = Vector2(2.01047, 0.0977654)
+texture = ExtResource("1_8yr8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(576, 200.5)
+shape = SubResource("RectangleShape2D_xysnw")
+
+[node name="Right platform sprite" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(983.271, 120.357)
+rotation = -0.314159
+scale = Vector2(1.68675, 0.0924535)
+texture = ExtResource("1_8yr8p")
+
+[node name="Right platform" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(983.113, 120.288)
+rotation = -0.314159
+shape = SubResource("RectangleShape2D_b63n3")
+
+[node name="Left platform sprite" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(168.948, 119.852)
+rotation = 0.314159
+scale = Vector2(1.6823, 0.0924435)
+texture = ExtResource("1_8yr8p")
+
+[node name="Left platform" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(168, 120)
+rotation = 0.314159
+shape = SubResource("RectangleShape2D_1enr2")
+
+[node name="testy thingy for simon limon" type="Node2D" parent="StaticBody2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("4_5bncp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(638, 104)
+shape = SubResource("RectangleShape2D_m38yl")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(638, 104)
+scale = Vector2(0.0894445, 0.0894444)
+texture = ExtResource("5_8a2b0")
