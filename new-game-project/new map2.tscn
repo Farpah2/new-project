@@ -99,4 +99,4 @@ position = Vector2(320, -103)
 rotation = 1.5708
 polygon = PackedVector2Array(177, -15, 181.401, -73.7469, 196, -214, 217, -15)
 
-[node name="testy thingy for simon limon" type="Node2D" parent="StaticBody2D"]
+[node name="testy thing for lucas fluffyre3scu" type="Node2D" parent="."]
