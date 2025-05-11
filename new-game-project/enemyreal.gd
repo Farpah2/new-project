@@ -10,4 +10,4 @@ func _process(delta):
 		look_at(target.position)  # Enemy faces the player
 		move_and_slide()  # Moves the enemy while handling collisions
 	else:
-		print("Player not found!")  # Debug message
+		print("Player not found!") # Debug message
